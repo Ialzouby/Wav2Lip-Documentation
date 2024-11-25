@@ -7,6 +7,54 @@ The app uses components to process video and audio inputs and integrates them in
 
 ---
 
+## **Model Conversion for iOS Deployment**
+
+### **Purpose:**
+The pre-trained PyTorch model from Wav2Lip needs to be converted to CoreML format for use in iOS applications. This involves exporting the model for ONNX compatibility and then converting ONNX to CoreML.
+
+### **Steps Overview:**
+1. **Export to ONNX:**
+   - Analyze the PyTorch model's input requirements.
+   - Export the model using dummy inputs to create an ONNX file.
+2. **Convert ONNX to CoreML:**
+   - Use CoreMLTools to convert the ONNX model.
+   - Validate the CoreML model to ensure compatibility with iOS.
+
+**Read `modelconversion.txt` for more details.**
+
+---
+
+## **Project Setup**
+
+### **Initial Steps**
+1. Install required tools:
+   - **Homebrew** for macOS package management.
+   - **Pyenv** for managing Python versions.
+2. Create a virtual environment to ensure isolated dependency management.
+3. Clone the [Wav2Lip repository](https://github.com/Rudrabha/Wav2Lip) and install dependencies.
+
+**Read `projectsetup.txt` for more details.**
+
+---
+
+## **Best Practices**
+
+### **Data Requirements:**
+- Use MP4 videos for better compatibility and processing speed.
+- Ensure audio is in WAV format with appropriate sampling rates.
+
+### **Performance Optimization:**
+- Compress video resolution for faster processing (e.g., 1080p or 720p).
+- Keep video length and audio duration aligned to avoid truncation or mismatch.
+
+### **Testing:**
+- Test the CoreML model with various inputs to ensure robustness.
+- Validate each iOS component independently to identify potential issues.
+
+**Read `bestpractices.txt` for more details.**
+
+---
+
 ## **Project Components**
 
 ### **1. ContentView.swift**
@@ -64,54 +112,6 @@ Prepares the video content by resizing and converting frames to match the input 
 - **Optimization:** Uses efficient image and video processing techniques to improve performance.
 
 **Read `videopreprocessor.txt` for more details.**
-
----
-
-## **Model Conversion for iOS Deployment**
-
-### **Purpose:**
-The pre-trained PyTorch model from Wav2Lip needs to be converted to CoreML format for use in iOS applications. This involves exporting the model for ONNX compatibility and then converting ONNX to CoreML.
-
-### **Steps Overview:**
-1. **Export to ONNX:**
-   - Analyze the PyTorch model's input requirements.
-   - Export the model using dummy inputs to create an ONNX file.
-2. **Convert ONNX to CoreML:**
-   - Use CoreMLTools to convert the ONNX model.
-   - Validate the CoreML model to ensure compatibility with iOS.
-
-**Read `modelconversion.txt` for more details.**
-
----
-
-## **Project Setup**
-
-### **Initial Steps**
-1. Install required tools:
-   - **Homebrew** for macOS package management.
-   - **Pyenv** for managing Python versions.
-2. Create a virtual environment to ensure isolated dependency management.
-3. Clone the [Wav2Lip repository](https://github.com/Rudrabha/Wav2Lip) and install dependencies.
-
-**Read `projectsetup.txt` for more details.**
-
----
-
-## **Best Practices**
-
-### **Data Requirements:**
-- Use MP4 videos for better compatibility and processing speed.
-- Ensure audio is in WAV format with appropriate sampling rates.
-
-### **Performance Optimization:**
-- Compress video resolution for faster processing (e.g., 1080p or 720p).
-- Keep video length and audio duration aligned to avoid truncation or mismatch.
-
-### **Testing:**
-- Test the CoreML model with various inputs to ensure robustness.
-- Validate each iOS component independently to identify potential issues.
-
-**Read `bestpractices.txt` for more details.**
 
 ---
 
