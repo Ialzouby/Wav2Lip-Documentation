@@ -1,4 +1,4 @@
-# Wav2Lip Project README
+# Wav2Lip Documentation
 
 ## **Overview**
 The Wav2Lip project synchronizes lip movements in videos with audio using a pre-trained deep learning model. This guide provides an in-depth explanation of the project setup, functionality, and deployment workflows, including converting the model for iOS applications.
