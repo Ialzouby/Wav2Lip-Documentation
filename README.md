@@ -116,7 +116,7 @@ Prepares the video content by resizing and converting frames to match the input 
 ---
 
 ## **Additional Resources**
-- **Wav2Lip Pretrained Model:** [GitHub Repository](https://github.com/Rudrabha/Wav2Lip)
+- **Original Wav2Lip Model (Thank you Rudrabha!):** [GitHub Repository](https://github.com/Rudrabha/Wav2Lip)
 - **iOS Implementation:** [Wav2Lip-App Repository](https://github.com/Ialzouby/Wav2Lip-App)
 
 ---
