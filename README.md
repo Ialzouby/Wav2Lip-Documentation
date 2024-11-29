@@ -20,7 +20,7 @@ The pre-trained PyTorch model from Wav2Lip needs to be converted to CoreML forma
    - Use CoreMLTools to convert the ONNX model.
    - Validate the CoreML model to ensure compatibility with iOS.
 
-**Read `modelconversion.txt` for more details.**
+**Read `conversion_guide.md` for more details.**
 
 ---
 
